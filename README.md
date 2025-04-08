@@ -5,6 +5,7 @@ Following along with the [Jolt quickstart](https://jolt.a16zcrypto.com/usage/qui
 To prove and verify (~30s on Macbook Pro M3): `cargo run --release`
 
 ### License for https://github.com/ebfe/rust-blake2
+```
 Copyright (c) 2014, Michael Gehring <mg@ebfe.org>
 All rights reserved.
 
@@ -28,3 +29,4 @@ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
 ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
