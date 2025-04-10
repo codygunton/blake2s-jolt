@@ -1,3 +1,5 @@
+use std::time::Instant;
+
 pub fn main() {
     let target_dir = "/tmp/jolt-guest-targets";
     let program = guest::compile_blake2s_hash(target_dir);
@@ -8,7 +10,9 @@ pub fn main() {
     let prove_blake2s_hash = guest::build_prover_blake2s_hash(program, prover_preprocessing);
     let verify_blake2s_hash = guest::build_verifier_blake2s_hash(verifier_preprocessing);
 
+    let now = Instant::now();
     let (output, proof) = prove_blake2s_hash(b"Hello, world!");
+    println!("Prover runtime: {} s", now.elapsed().as_secs_f64());
     let is_valid = verify_blake2s_hash(b"Hello, world!", output, proof);
 
     println!("output: {:?}", output);
